@@ -34,7 +34,9 @@
     display: none;
 
     &.active {
-      display: block;
+      display: flex;
+      flex-direction: column;
+      gap: $type-size-5;
     }
   }
 }
