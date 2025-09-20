@@ -1,18 +1,31 @@
 // home > categories-tabs
 .categories-tabs {
-  display: flex;
-  gap: 16px;
-  margin-bottom: 20px;
+  // border: 1px solid skyblue;
+  // background-color: #fff;
+
   list-style: none;
+
+  display: flex;
+  // gap: 1em;
+  margin: 0;
   padding: 0;
+  padding-left: $border-radius;
 
   .category-tab {
+    margin: 0;
+
     a {
       cursor: pointer;
-      padding: 6px 12px;
-      display: inline-block;
-      color: #555;
+      color: $gray;
       text-decoration: none;
+      font-size: $type-size-6;
+
+      padding: 0.6rem 1.6em;
+      display: inline-block;
+      height: 100%;
+      border-radius: $border-radius-sm $border-radius-sm 0 0;
+
+      position: relative;
 
       &:hover {
         color: #000;
@@ -22,14 +35,20 @@
     &.active {
       a {
         font-weight: 600;
-        border-bottom: 2px solid #000;
         color: #000;
+        background-color: #fff;
       }
     }
   }
 }
 
 .categories-posts {
+  // border: 1px solid red;
+  padding: 1rem;
+  
+  background-color: #fff;
+  border-radius: $border-radius;
+
   .category-post {
     display: none;
 

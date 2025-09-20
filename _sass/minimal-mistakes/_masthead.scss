@@ -5,10 +5,13 @@
 .masthead {
   position: relative;
   border-bottom: 1px solid $border-color;
+  // background-color: $blue;
+
   -webkit-animation: $intro-transition;
   animation: $intro-transition;
   -webkit-animation-delay: 0.15s;
   animation-delay: 0.15s;
+  
   z-index: 20;
 
   &__inner-wrap {
@@ -36,11 +39,6 @@
       text-decoration: none;
     }
   }
-}
-
-// custom - backgroundColor
-.masthead {
-  background: linear-gradient(to bottom, $background-blue, #fff);
 }
 
 #site-nav {
@@ -86,7 +84,6 @@
     padding: 0;
     clear: both;
     list-style-type: none;
-    // font-size: 0.9em;
     font-size: $type-size-5;
   }
 }

@@ -89,8 +89,8 @@ $type-size-3: 1.563em !default; // ~25.008px
 $type-size-4: 1.25em !default; // ~20px
 $type-size-5: 1em !default; // ~16px
 $type-size-6: 0.9em !default; // 0.75em ~12px
-$type-size-7: 0.8em !default; // 0.6875em ~11px
-$type-size-8: 0.75em !default; // 0.625em ~10px
+$type-size-7: 0.75em !default; // 0.6875em ~11px
+$type-size-8: 0.6875em !default; // 0.625em ~10px
 
 /* headline scale */
 $h-size-1: 1.563em !default; // ~25.008px
@@ -108,29 +108,33 @@ $primary-color: #000000 !default; // #6f777d
 $success-color: #3fa63f !default; // #3fa63f
 $warning-color: #d67f05 !default; // #d67f05
 $danger-color: #ee5f5b !default; // #ee5f5b
-$info-color: #3b9cba !default; // #3b9cba
+$info-color: #000000 !default; // #3b9cba
 $focus-color: $primary-color !default; // $primary-color
 $active-color: mix(#fff, $primary-color, 80%) !default; // mix(#fff, $primary-color, 80%)
 
 // custom
-$green: #d3ecbf;
-$background-green: mix(#fff, $green, 20%);
-$blue: #a9e2eb;
-$background-blue: mix(#fff, $blue, 50%);
-$dark-blue: mix($primary-color, $blue, 50%);
+$green: #d3ecbf; // #d3ecbf;
+$background-green: $green; // mix(#fff, $green, 20%);
 
-$gray: #303030 !default; // #7a8288
+$blue: #3AAFED;
+$background-blue: mix(#fff, $blue, 90%);
+$lighter-blue: mix(#fff, $blue, 60%);
+$light-blue: mix(#fff, $blue, 50%);
+$dark-blue: mix($primary-color, $blue, 50%);
+$darker-blue: mix($primary-color, $blue, 80%);
+
+$gray: #303030 !default; // #7a8288 #303030 
 $dark-gray: mix(#000, $gray, 50%) !default;
 $darker-gray: mix(#000, $gray, 60%) !default;
 $light-gray: mix(#fff, $gray, 50%) !default;
 $lighter-gray: mix(#fff, $gray, 90%) !default;
 
-$background-color: #fff !default;
+$background-color: $background-blue !default;
 $code-background-color: #fafafa !default;
 $code-background-color-dark: $light-gray !default;
 $text-color: $dark-gray !default;
 $muted-text-color: mix(#fff, $text-color, 20%) !default;
-$border-color: $lighter-gray !default;
+$border-color: $lighter-gray !default; // $lighter-gray !default;
 $form-background-color: $lighter-gray !default;
 $footer-background-color: $background-green; // $lighter-gray !default;
 
@@ -150,7 +154,7 @@ $flickr-color: #ff0084 !default;
 $foursquare-color: #0072b1 !default;
 $github-color: #171516 !default;
 $gitlab-color: #e24329 !default;
-$instagram-color: #ff0069; // #517fa4 !default;
+$instagram-color: #517fa4 !default;
 $keybase-color: #ef7639 !default;
 $lastfm-color: #d51007 !default;
 $linkedin-color: #007bb6 !default;
@@ -169,9 +173,9 @@ $youtube-color: #bb0000 !default;
 $xing-color: #006567 !default;
 
 /* links */
-$link-color: mix(#000, $info-color, 20%) !default;
-$link-color-hover: mix(#000, $link-color, 25%) !default;
-$link-color-visited: mix(#fff, $link-color, 15%) !default;
+$link-color: $info-color; // mix(#000, $info-color, 20%) !default;
+$link-color-hover: $blue; // mix(#000, $link-color, 25%) !default;
+$link-color-visited: $info-color; // mix(#fff, $link-color, 15%) !default;
 $masthead-link-color: $primary-color !default;
 $masthead-link-color-hover: mix(#000, $primary-color, 25%) !default;
 $navicon-link-color-hover: mix(#fff, $primary-color, 75%) !default;
@@ -213,15 +217,16 @@ $max-width: $x-large !default;
    Grid
    ========================================================================== */
 
-$right-sidebar-width-narrow: 150px !default; // 200px 
-$right-sidebar-width:  200px !default; // 300px
-$right-sidebar-width-wide:  300px !default; // 400px
+$sidebar-width-narrow: 150px !default; // 200px 
+$sidebar-width:  200px !default; // 300px
+$sidebar-width-wide:  300px !default; // 400px
 
 /*
    Other
    ========================================================================== */
 
-$border-radius: 4px !default;
+$border-radius: 1rem !default; // 4px !default;
+$border-radius-sm: calc($border-radius * 0.5) !default;
 $box-shadow: 0 1px 10px rgba(85, 85, 85, 0.125) !default;
 $nav-height: 2em !default;
 $nav-toggle-height: 2rem !default;
