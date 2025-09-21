@@ -5,10 +5,14 @@
   display: flex;
   margin: 0;
   padding: 0;
-  padding-left: $border-radius;
+  margin-inline: $border-radius;
+  width: calc(100% - $border-radius * 2);
+  overflow-y: scroll;
+  border-radius: $border-radius-sm $border-radius-sm 0 0;
 
   .category-tab {
     margin: 0;
+    white-space: nowrap;
 
     a {
       cursor: pointer;

@@ -173,7 +173,7 @@
   height: 50px;
 
   img {
-    border-radius: calc($border-radius - 0.5rem);
+    border-radius: $border-radius-sm;
   }
 
   @include breakpoint($large) {
