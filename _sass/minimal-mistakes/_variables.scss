@@ -226,7 +226,7 @@ $sidebar-width-wide:  300px !default; // 400px
    ========================================================================== */
 
 $border-radius: 1rem !default; // 4px !default;
-$border-radius-sm: calc($border-radius * 0.5) !default;
+$border-radius-sm: $border-radius * 0.5 !default;
 $box-shadow: 0 1px 10px rgba(85, 85, 85, 0.125) !default;
 $nav-height: 2em !default;
 $nav-toggle-height: 2rem !default;
