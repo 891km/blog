@@ -24,6 +24,10 @@
     grid-template-columns: $sidebar-width 1fr $sidebar-width;
     gap: 1.5em;
 
+    & > * {
+      overflow: hidden;
+    }
+
     & > div {
       grid-column: 1;
       grid-row: 1;
@@ -33,7 +37,6 @@
       grid-column: 3;
       grid-row: 1;
     }
-
     
     & > .archive,
     & > article {
@@ -63,7 +66,7 @@ body {
   flex: 1 0 auto;
 }
 
-.page {
+.page {  
   background-color: #fff;
   border-radius: $border-radius;
   padding: 1em;
@@ -83,6 +86,27 @@ body {
       margin-inline: 0;
       width: 100%;
       clear: both;
+    }
+
+    header {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      margin-bottom: 2rem;
+      position: relative;
+
+      > * {
+        margin: 0;
+        padding: 0;
+      }
+
+      &::after {
+        content: "";
+        position: absolute;
+        top: calc(100% + 1rem);
+        width: 100%;
+        border-top: 1px solid $border-color;
+      }
     }
   }
 }

@@ -17,9 +17,7 @@
 }
 
 .archive__subtitle {
-  padding-bottom: 0.5em;
   color: $muted-text-color;
-  border-bottom: 1px solid $border-color;
 
   + .list__item .archive__item-title {
     margin-top: 0.5em;
@@ -29,7 +27,13 @@
 .archive__item {
   position: relative;
   background-color: #fff;
-  padding: 0.8rem 1rem;
+  padding: 1rem 1rem;
+  border-radius: $border-radius;
+
+  display: flex;
+  justify-content: start;
+  align-items: start;
+  gap: 1rem;
 
   a {
     position: relative;
@@ -41,8 +45,20 @@
   }
 }
 
+.archive__item-wrapper {
+  flex: 1 1 auto;
+  max-width: 100%;
+
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+
+  * {
+    margin: 0;
+  }
+}
+
 .archive__item-title {
-  margin-bottom: 0.25em;
   line-height: initial;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -67,8 +83,12 @@
 }
 
 .archive__item-excerpt {
-  margin-top: 0;
-  font-size: $type-size-6;
+  font-size: $type-size-5;
+
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+
 
   & + p {
     text-indent: 0;
@@ -79,13 +99,34 @@
   }
 }
 
+.page__meta-tags {
+  a {
+    display: inline-block;
+    padding: 2px 8px;
+    margin-top: 0.5rem;
+    text-align: center;
+    font-size: $type-size-6;
+    border-radius: $border-radius;
+    background-color: $lighter-blue;
+    color: $dark-blue;
+
+    &:hover {
+      background-color: $light-blue;
+    }
+  }
+}
+
 .archive__item-teaser {
+  flex: 0 1 150px;
+  min-width: 0;
+
   position: relative;
-  border-radius: $border-radius;
+  border-radius: $border-radius-sm;
   overflow: hidden;
 
   img {
-    width: 100%;
+    object-fit: cover;
+    aspect-ratio: 4 / 3;
   }
 }
 
@@ -119,15 +160,21 @@
    ========================================================================== */
 
 .list__item {
-  border-bottom: 1px solid $border-color;
-  .page__meta {
-    margin: 0 0 4px;
-    font-size: $type-size-6; // 0.6em;
-  }
-}
+  position: relative;
 
-.list__item:last-child {
-  border-bottom: none;
+  .page__meta {
+    font-size: $type-size-6;
+  }
+
+  &:not(:last-child)::after {
+    content: "";
+    position: absolute;
+    top: calc(100% + 0.5rem);
+    left: $border-radius;
+    right: $border-radius;
+    width: calc(100% - $border-radius * 2);
+    border-top: 1px solid $border-color;
+  }
 }
 
 /*
